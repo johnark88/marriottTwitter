@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 import twit from 'twit'
 
 export default {
@@ -18,13 +18,15 @@ export default {
     }
   },
   methods: {
+    
       twitter: function () {
         let T = new twit({
           consumer_key:         'R4KujnUwMkxCRpUIl3QURufav',
           consumer_secret:      'vppJcsYaXBz0J14RPvkszrlZhWCyo2u9FRaQf7psGyMh6jPIZu',
           access_token:         '123084389-DrT2QHmsN12VdZvu8F5jXhv8UzGrCWyWzYevVVjL',
-          access_token_secret:  'FNDgI4fJjNcItWrYHCQgAWepElfDcy5kSP9gyyBJdAhve',
+          access_token_secret:  'FNDgI4fJjNcItWrYHCQgAWepElfDcy5kSP9gyyBJdAhve', 
       })
+      
         T.post('statuses/update', {status: 'Batman'})
           .catch(function(err){
             console.log('error',err.stack)
